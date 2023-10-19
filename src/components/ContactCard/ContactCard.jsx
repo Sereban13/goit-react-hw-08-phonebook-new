@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { Card, CardBlock } from './ContactCard.Styled';
+import { Card, Button, CardBlock } from './ContactCard.Styled';
 import { deleteContact } from 'redux/contacts/operations';
 
 export const ContactCard = ({ contact: { id, name, number } }) => {
@@ -9,8 +9,8 @@ export const ContactCard = ({ contact: { id, name, number } }) => {
       <Card>
         <span>{name}</span>
         <span>{number}</span>
-        <button onClick={() => dispatch(deleteContact(id))}>Delete</button>
       </Card>
+      <Button onClick={() => dispatch(deleteContact(id))}>Delete</Button>
     </CardBlock>
   );
 };

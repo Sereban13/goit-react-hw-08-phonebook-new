@@ -1,5 +1,6 @@
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactLitst';
+import { SearchBar } from 'components/Searchbar/Searchbar';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getError, getIsLoading } from 'redux/contacts/contactsSlice';
@@ -26,6 +27,7 @@ const Contacts = () => {
       <h2>PhoneBook</h2>
       <ContactForm />
       <h2>Contacts</h2>
+      <SearchBar />
       {isLoading && !error && <b>Request in progress </b>}
       <ContactList />
     </div>
